@@ -12,7 +12,7 @@ class Employee:
     If the number of contracts worked is given, the employee is assumed to receive contract-based
     commission.
     """
-    def __init__(self, name, salary: int, rate, hours=-1, contracts=0):
+    def __init__(self, name: str, salary: int, rate: int, hours: int = -1, contracts: int = 0) -> None:
         self.name = name
         self.salary = salary
         self.hours = hours
@@ -50,19 +50,19 @@ class Employee:
 
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
-billie = Employee('Billie', 4000, 0)
+billie = Employee(name='Billie', salary=4000, rate=0)
 
 # Charlie works on a contract of 100 hours at 25/hour.  Their total pay is 2500.
-charlie = Employee('Charlie', 25, 0, 100)
+charlie = Employee(name='Charlie', salary=25, rate=0, hours=100)
 
 # Renee works on a monthly salary of 3000 and receives a commission for 4 contract(s) at 200/contract.  Their total pay is 3800.
-renee = Employee('Renee', 3000, 200, contracts=4)
+renee = Employee(name='Renee', salary=3000, rate=200, contracts=4)
 
 # Jan works on a contract of 150 hours at 25/hour and receives a commission for 3 contract(s) at 220/contract.  Their total pay is 4410.
-jan = Employee('Jan', 25, 220, 150, 3)
+jan = Employee(name='Jan', salary=25, rate=220, hours=150, contracts=3)
 
 # Robbie works on a monthly salary of 2000 and receives a bonus commission of 1500.  Their total pay is 3500.
-robbie = Employee('Robbie', 2000, 1500)
+robbie = Employee(name='Robbie', salary=2000, rate=1500)
 
 # Ariel works on a contract of 120 hours at 30/hour and receives a bonus commission of 600.  Their total pay is 4200.
-ariel = Employee('Ariel', 30, 600, 120)
+ariel = Employee(name='Ariel', salary=30, rate=600, hours=120)
